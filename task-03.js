@@ -17,7 +17,7 @@ const images = [
   }
 ];
 const gallery = document.querySelector("#gallery");
-gallery.setAttribute("style", "display:flex");
+gallery.setAttribute("style", "display:flex;padding:0");
 function createGallery(arr) {
   let domElement = "";
   arr.forEach(() => (domElement += `<li><image>`));
@@ -27,8 +27,8 @@ function createGallery(arr) {
     element.setAttribute("style", "list-style: none");
     element.firstChild.setAttribute("src", arr[ind].url);
     element.firstChild.setAttribute("alt", arr[ind].alt);
-    element.firstChild.setAttribute("width", "200px");
-    element.firstChild.setAttribute("height", "100px");
+    element.firstChild.setAttribute("width", "300px");
+    element.firstChild.setAttribute("height", "200px");
   });
 }
 createGallery(images);
