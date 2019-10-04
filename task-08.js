@@ -11,14 +11,12 @@ function addBoxes() {
   const arrayOfBoxes = [];
   for (let i = 0; i < amount; i++) {
     arrayOfBoxes.push(document.createElement("div"));
+    arrayOfBoxes[i].style.backgroundColor =
+      "#" + (((1 << 24) * Math.random()) | 0).toString(16);
+    arrayOfBoxes[i].style.width = `${30 + i * 10}px`;
+    arrayOfBoxes[i].style.height = `${30 + i * 10}px`;
   }
   boxes.append(...arrayOfBoxes);
-  arrayOfBoxes.forEach((elem, idx) => {
-    elem.style.backgroundColor =
-      "#" + (((1 << 24) * Math.random()) | 0).toString(16);
-    elem.style.width = `${30 + idx * 10}px`;
-    elem.style.height = `${30 + idx * 10}px`;
-  });
 }
 function deleteBoxes() {
   const arrayClean = [...boxes.children];

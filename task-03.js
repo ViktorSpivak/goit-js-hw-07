@@ -27,8 +27,8 @@ function createGallery(arr) {
     element.setAttribute("style", "list-style: none");
     element.firstChild.setAttribute("src", arr[ind].url);
     element.firstChild.setAttribute("alt", arr[ind].alt);
-    element.firstChild.setAttribute("width", "300px");
-    element.firstChild.setAttribute("height", "200px");
+    element.firstChild.setAttribute("width", "300");
+    element.firstChild.setAttribute("height", "200");
   });
 }
 createGallery(images);
